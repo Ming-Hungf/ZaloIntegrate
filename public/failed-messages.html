@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tin nhắn thất bại - Zalo Integration</title>
+    <link rel="stylesheet" href="failed-messages.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1><i class="fas fa-exclamation-triangle"></i> Tin nhắn thất bại</h1>
+        <div class="nav-links">
+          <a href="/chats" class="nav-link">
+            <i class="fas fa-comments"></i> Danh sách Chats
+          </a>
+          <a href="/templates" class="nav-link">
+            <i class="fas fa-file-alt"></i> Quản lý Mẫu Tin nhắn
+          </a>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button id="refresh-btn" class="btn btn-primary">
+          <i class="fas fa-sync-alt"></i> Làm mới
+        </button>
+        <button id="clear-all-btn" class="btn btn-danger">
+          <i class="fas fa-trash"></i> Xóa tất cả
+        </button>
+        <div class="stats">
+          <span id="failed-count">0</span> tin nhắn thất bại
+        </div>
+      </div>
+
+      <!-- Status Message -->
+      <div id="status-message" class="status-message"></div>
+
+      <!-- Failed Messages List -->
+      <div class="failed-messages-container">
+        <div id="failed-messages-list" class="failed-messages-list">
+          <!-- Failed messages will be rendered here -->
+        </div>
+
+        <div id="empty-state" class="empty-state" style="display: none">
+          <div class="empty-state-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3>Không có tin nhắn thất bại nào</h3>
+          <p>Tất cả tin nhắn đã được gửi thành công!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="modal" style="display: none">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal-title">Xác nhận</h3>
+          <button id="modal-close" class="modal-close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p id="modal-message">
+            Bạn có chắc chắn muốn thực hiện hành động này?
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button id="modal-cancel" class="btn btn-secondary">Hủy</button>
+          <button id="modal-confirm" class="btn btn-primary">Xác nhận</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="failed-messages.js"></script>
+  </body>
+</html>

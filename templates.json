@@ -1,0 +1,55 @@
+[
+  {
+    "id": "23b4682e-bf43-4ea7-bf95-76e3cbd5a930",
+    "displayName": "12",
+    "content": "tesst"
+  },
+  {
+    "id": "472fa5cb-6fe2-4661-8633-9502e30558d8",
+    "displayName": "test tệp đính kèm",
+    "content": "test tệp đính kèm",
+    "attachments": [
+      {
+        "originalName": "photo_2025-03-31_10-36-36.jpg",
+        "filename": "1752405738394-284725342.jpg",
+        "path": "/uploads/1752405738394-284725342.jpg",
+        "size": 93595,
+        "mimetype": "image/jpeg",
+        "uploadedAt": "2025-07-13T11:22:18.397Z"
+      }
+    ],
+    "createdAt": "2025-07-13T11:22:18.413Z"
+  },
+  {
+    "id": "7e3d3c2f-9260-46dc-8662-b22d0c157c63",
+    "displayName": "Test tất cả tệp đính kèm",
+    "content": "Test tất cả tệp đính kèm",
+    "attachments": [
+      {
+        "originalName": "photo_2024-08-15_13-54-09.jpg",
+        "filename": "1752507639750-529581589.jpg",
+        "path": "/uploads/1752507639750-529581589.jpg",
+        "size": 121799,
+        "mimetype": "image/jpeg",
+        "uploadedAt": "2025-07-14T15:40:39.760Z"
+      },
+      {
+        "originalName": "421030554_1057863145451322_1375515664944365993_n.mp4",
+        "filename": "1752507639752-398786201.mp4",
+        "path": "/uploads/1752507639752-398786201.mp4",
+        "size": 427513,
+        "mimetype": "video/mp4",
+        "uploadedAt": "2025-07-14T15:40:39.760Z"
+      },
+      {
+        "originalName": "file_example_MP3_1MG.mp3",
+        "filename": "1752507639756-66537015.mp3",
+        "path": "/uploads/1752507639756-66537015.mp3",
+        "size": 1059386,
+        "mimetype": "audio/mpeg",
+        "uploadedAt": "2025-07-14T15:40:39.760Z"
+      }
+    ],
+    "createdAt": "2025-07-14T15:40:39.763Z"
+  }
+]

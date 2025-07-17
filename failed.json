@@ -1,0 +1,18 @@
+[
+  {
+    "id": "sample-1",
+    "chatId": "123456789",
+    "chatName": "Nguyễn Văn A",
+    "templateId": "template-001",
+    "templateName": "Chào hỏi khách hàng",
+    "timestamp": "2025-01-14T10:30:00.000Z"
+  },
+  {
+    "id": "sample-2", 
+    "chatId": "987654321",
+    "chatName": "Nhóm Marketing",
+    "templateId": "template-002",
+    "templateName": "Thông báo khuyến mãi",
+    "timestamp": "2025-01-14T11:15:00.000Z"
+  }
+]

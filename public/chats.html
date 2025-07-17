@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh sách Chats - Zalo Integration</title>
+    <link rel="stylesheet" href="chats.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1><i class="fas fa-comments"></i> Danh sách Chats</h1>
+        <div class="nav-links">
+          <a href="/templates" class="nav-link">
+            <i class="fas fa-file-alt"></i> Quản lý Mẫu Tin nhắn
+          </a>
+          <a href="/failed-messages" class="nav-link">
+            <i class="fas fa-exclamation-triangle"></i> Tin nhắn thất bại
+          </a>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <div class="control-row">
+          <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input
+              type="text"
+              id="filter-input"
+              class="search-input"
+              placeholder="Tìm kiếm theo tên chat..."
+            />
+          </div>
+          <select id="template-select" class="template-select">
+            <option value="">Chọn mẫu tin nhắn</option>
+          </select>
+        </div>
+
+        <div class="control-row">
+          <button id="send-template-btn" class="btn btn-primary" disabled>
+            <i class="fas fa-paper-plane"></i> Gửi Template
+          </button>
+          <button id="refresh-btn" class="btn btn-secondary">
+            <i class="fas fa-sync-alt"></i> Làm mới
+          </button>
+          <button id="logout-btn" class="btn btn-danger">
+            <i class="fas fa-sign-out-alt"></i> Đăng xuất
+          </button>
+        </div>
+      </div>
+
+      <!-- Status Message -->
+      <div id="status-message" class="status-message"></div>
+
+      <!-- Chat List -->
+      <div class="chat-list-container">
+        <div id="entity-list" class="entity-list">
+          <!-- Chat items will be rendered here -->
+        </div>
+
+        <div id="empty-state" class="empty-state" style="display: none">
+          <div class="empty-state-icon">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h3>Chưa có cuộc trò chuyện nào</h3>
+          <p>Hãy làm mới danh sách để tải các cuộc trò chuyện từ Zalo</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="chats.js"></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản lý Mẫu Tin nhắn - Zalo Integration</title>
+    <link rel="stylesheet" href="templates.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1><i class="fas fa-file-alt"></i> Quản lý Mẫu Tin nhắn</h1>
+        <div class="nav-links">
+          <a href="/chats" class="nav-link">
+            <i class="fas fa-comments"></i> Danh sách Chats
+          </a>
+          <a href="/failed-messages" class="nav-link">
+            <i class="fas fa-exclamation-triangle"></i> Tin nhắn thất bại
+          </a>
+        </div>
+      </div>
+
+      <!-- Status Message -->
+      <div id="status-message" class="status-message"></div>
+
+      <!-- Form Container -->
+      <div class="form-container">
+        <div class="form-title">
+          <i class="fas fa-plus-circle"></i> Tạo / Chỉnh sửa Mẫu Tin nhắn
+        </div>
+
+        <input id="template-id" type="hidden" />
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="template-name" class="form-label">
+              <i class="fas fa-tag"></i> Tên mẫu tin nhắn
+            </label>
+            <input
+              id="template-name"
+              class="form-input"
+              placeholder="Nhập tên mẫu tin nhắn..."
+              maxlength="100"
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="template-content" class="form-label">
+              <i class="fas fa-comment-alt"></i> Nội dung mẫu tin nhắn
+            </label>
+            <textarea
+              id="template-content"
+              class="form-input form-textarea"
+              placeholder="Nhập nội dung mẫu tin nhắn..."
+              maxlength="1000"
+            ></textarea>
+          </div>
+        </div>
+
+        <!-- File Attachments Section -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">
+              <i class="fas fa-paperclip"></i> Tệp đính kèm
+            </label>
+
+            <!-- File Upload Area -->
+            <div class="file-upload-area" id="file-upload-area">
+              <div class="upload-zone" id="upload-zone">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <p class="upload-text">
+                  Kéo thả tệp vào đây hoặc
+                  <span class="upload-link">chọn tệp</span>
+                </p>
+                <p class="upload-hint">
+                  Hỗ trợ: Ảnh (JPG, PNG, GIF), Video (MP4, AVI, MOV), Audio
+                  (MP3, WAV, AAC)
+                </p>
+                <input
+                  type="file"
+                  id="file-input"
+                  multiple
+                  accept="image/*,video/*,audio/*"
+                  style="display: none"
+                />
+              </div>
+            </div>
+
+            <!-- File Preview List -->
+            <div
+              class="file-preview-container"
+              id="file-preview-container"
+              style="display: none"
+            >
+              <div class="file-preview-header">
+                <span class="file-count"
+                  >Đã chọn <span id="file-count">0</span> tệp</span
+                >
+                <button
+                  type="button"
+                  class="btn-clear-all"
+                  id="clear-all-files"
+                >
+                  <i class="fas fa-trash"></i> Xóa tất cả
+                </button>
+              </div>
+              <div class="file-preview-list" id="file-preview-list">
+                <!-- File preview items will be added here -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button id="save-btn" class="btn btn-primary" disabled>
+            <i class="fas fa-save"></i> Lưu
+          </button>
+          <button id="clear-btn" class="btn btn-secondary">
+            <i class="fas fa-eraser"></i> Xóa form
+          </button>
+        </div>
+      </div>
+
+      <!-- Template List -->
+      <div class="template-list-container">
+        <div class="list-title">
+          <i class="fas fa-list"></i> Danh sách Mẫu Tin nhắn
+        </div>
+
+        <div id="template-list" class="template-list">
+          <!-- Template items will be rendered here -->
+        </div>
+
+        <div id="empty-state" class="empty-state" style="display: none">
+          <div class="empty-state-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>Chưa có mẫu tin nhắn nào</h3>
+          <p>Hãy tạo mẫu tin nhắn đầu tiên của bạn</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="templates.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập Zalo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="/login.js"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <main class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+      <h1 class="text-2xl font-bold text-center mb-4">Đăng nhập Zalo</h1>
+      <p class="text-center text-gray-600 mb-4">
+        Quét mã QR bằng ứng dụng Zalo để đăng nhập
+      </p>
+
+      <section
+        id="status-message"
+        class="hidden text-center p-2 mb-4 rounded"
+        class:info="bg-blue-100 text-blue-700"
+        class:success="bg-green-100 text-green-700"
+        class:error="bg-red-100 text-red-700"
+      ></section>
+
+      <section id="qr-container" class="hidden text-center mb-4">
+        <img id="qr-image" src="" alt="QR Code" class="mx-auto mb-2" />
+        <p class="text-sm text-gray-600">
+          Quét mã QR này bằng ứng dụng Zalo trên điện thoại
+        </p>
+      </section>
+
+      <section id="loading-spinner" class="hidden text-center mb-4">
+        <div
+          class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-gray-900"
+        ></div>
+        <p class="text-sm text-gray-600">Đang xử lý...</p>
+      </section>
+
+      <section class="flex justify-center gap-4">
+        <button
+          id="login-btn"
+          class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Tạo mã QR
+        </button>
+        <button
+          id="refresh-btn"
+          class="hidden bg-gray-500 text-white px-4 py-2 rounded hover:bg-gray-600"
+        >
+          Làm mới QR
+        </button>
+      </section>
+    </main>
+  </body>
+</html>
